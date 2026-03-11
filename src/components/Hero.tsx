@@ -32,12 +32,12 @@ export function Hero() {
 
             <p className="max-w-xl text-sm leading-relaxed text-zinc-600 md:text-lg dark:text-zinc-400">
               Разрабатываю интерфейсы на React и Next.js. Большой опыт в
-              CRM-системах. Также имеется некоммерческий fullstack-опыт с <code>nestjs + postgresql.</code>
+              CRM-системах. Также имеется некоммерческий fullstack-опыт с nestjs + postgresql.
             </p>
 
             <div className="flex flex-wrap gap-1 text-sm text-zinc-500">
-              <span>3+ years coding</span>
-              <span>• 20+ projects</span>
+              <span>3+ года кодинга</span>
+              <span>• 20+ проектов</span>
               <span>• 1 open source библиотека</span>
             </div>
 
