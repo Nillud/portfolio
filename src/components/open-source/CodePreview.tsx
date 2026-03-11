@@ -64,7 +64,7 @@ export function CodePreview() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="mt-6">
+    <div className="my-10">
       <Button
         variant="outline"
         onClick={() => setOpen(!open)}

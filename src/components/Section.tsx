@@ -9,7 +9,7 @@ export function Section({ title, children, id }: Props) {
   return (
     <section
       id={id}
-      className="mb-32"
+      className="mb-16 md:mb-32"
     >
       <h2 className="text-3xl font-bold tracking-tight">{title}</h2>
 

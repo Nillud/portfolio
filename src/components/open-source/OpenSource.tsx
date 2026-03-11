@@ -2,20 +2,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { NpmIcon } from '../icons/NpmIcon'
-import { Button } from '../ui/Button'
 import { CodePreview } from './CodePreview'
+import { CopyInstall } from './CopyInstall'
 import { DataTablePlayground } from './DataTablePlayground'
 import { NpmStats } from './NpmStats'
-import { TableDemo } from './TableDemo'
-import { CopyInstall } from './CopyInstall'
 
 export function OpenSource() {
   return (
-    <div className="space-y-10">
+    <div>
       <div className="rounded-2xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-start md:flex-row md:items-center justify-between">
           <div className="w-full">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-start md:flex-row md:items-center gap-2">
               <h3 className="text-2xl font-semibold">nillud-data-table</h3>
 
               <Image
@@ -50,7 +48,7 @@ export function OpenSource() {
           <Link
             href="https://www.npmjs.com/package/nillud-data-table"
             target="_blank"
-            className="mb-auto flex items-center gap-2 rounded-lg bg-red-500 px-4 py-2 text-white hover:opacity-80"
+            className="mt-3 md:mt-0 mb-auto flex items-center gap-2 rounded-lg bg-red-500 px-4 py-2 text-white hover:opacity-80"
           >
             <NpmIcon />
             npm
@@ -58,21 +56,23 @@ export function OpenSource() {
         </div>
       </div>
 
-      <CodePreview />
+      {
+        <div className='hidden lg:flex lg:flex-col'>
+          <CodePreview />
 
-      {/* <TableDemo /> */}
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <h3 className="text-xl font-semibold">Interactive Playground</h3>
 
-      <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-8 dark:border-zinc-800 dark:bg-zinc-900">
-        <h3 className="text-xl font-semibold">Interactive Playground</h3>
+            <p className="mb-4 text-base text-zinc-500">
+              Эта интерактивная площадка демонстрирует гибкость компонента{' '}
+              <b>nillud-data-table</b>. Переключайте функции, чтобы увидеть, как
+              адаптируется таблица.
+            </p>
 
-        <p className="mb-4 text-base text-zinc-500">
-          Эта интерактивная площадка демонстрирует гибкость компонента{' '}
-          <b>nillud-data-table</b>. Переключайте функции, чтобы увидеть, как
-          адаптируется таблица.
-        </p>
-
-        <DataTablePlayground />
-      </div>
+            <DataTablePlayground />
+          </div>
+        </div>
+      }
     </div>
   )
 }

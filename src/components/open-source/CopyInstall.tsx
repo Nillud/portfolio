@@ -9,7 +9,7 @@ export function CopyInstall() {
   const [isCopied, setIsCopied] = useState<boolean>(false)
 
   return (
-    <div className="mt-4 flex items-center gap-4">
+    <div className="hidden mt-4 md:flex items-center gap-4">
       <code className="rounded-lg bg-black px-4 py-2 text-white">
         npm install nillud-data-table
       </code>
