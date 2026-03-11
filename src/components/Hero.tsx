@@ -1,4 +1,4 @@
-import { Briefcase, Github } from 'lucide-react'
+import { Briefcase, Download, Github } from 'lucide-react'
 import Image from 'next/image'
 
 import { Button } from './ui/Button'
@@ -52,11 +52,12 @@ export function Hero() {
 
               <Button
                 asLink
-                href="https://ufa.hh.ru/resume/743a536dff081c3c650039ed1f4c363142564a"
+                href="/resume.pdf"
+                target="_blank"
                 variant="outline"
-                icon={<Briefcase size={18} />}
+                icon={<Download size={18} />}
               >
-                HH
+                Резюме
               </Button>
             </div>
           </div>

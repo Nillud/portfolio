@@ -10,6 +10,7 @@ interface Props extends ComponentProps<'button'> {
   onClick?: () => void
   asLink?: boolean
   href?: string
+  target?: '_blank' | '_self'
 }
 
 export function Button({
@@ -20,6 +21,7 @@ export function Button({
   onClick,
   asLink = false,
   href = '',
+  target,
   ...props
 }: Props) {
   const base =
@@ -40,6 +42,7 @@ export function Button({
           className={twMerge(base, variants[variant], className)}
           href={href}
           onClick={onClick}
+          target={target}
         >
           {icon}
           {children}

@@ -22,7 +22,7 @@ export default function Home() {
 
         <Section
           id="projects"
-          title="Pet проекты"
+          title="Pet-проекты"
         >
           <Projects />
         </Section>
